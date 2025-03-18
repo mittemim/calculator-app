@@ -13,3 +13,8 @@ def divide(x, y):
     return x / y
 def power(x, y):
     return x ** y
+
+def sqrt(x):
+    if x < 0:
+        raise ValueError("Cannot compute square root of a negative number!")
+    return x ** 0.5
