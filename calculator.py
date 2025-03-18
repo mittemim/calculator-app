@@ -1,10 +1,8 @@
 def add(x, y):
-    result = x + y
-    return result
+    return x + y
 
 def subtract(x, y):
-    result = x - y
-    return result
+    return x - y
 def multiply(x, y):
     return x * y
 
