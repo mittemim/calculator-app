@@ -1,5 +1,5 @@
 import tkinter as tk
-from calculator import add, subtract, multiply, divide, power
+from calculator import add, subtract, multiply, divide, power, sqrt
 
 class CalculatorApp:
     """
@@ -20,7 +20,7 @@ class CalculatorApp:
 
         # Кнопки калькулятора
         buttons = [
-            '7', '8', '9', '/',
+            '7', '8', '9', '/', '√',
             '4', '5', '6', '*',
             '1', '2', '3', '-',
             '0', '.', '=', '+'
@@ -65,9 +65,17 @@ class CalculatorApp:
             except Exception as e:
                 self.display.delete(0, tk.END)
                 self.display.insert(0, "Ошибка")
+        elif button == "√":
+            try:
+                number = float(self.display.get())
+                result = str(sqrt(number))
+                self.display.delete(0, tk.END)
+                self.display.insert(0, result)
+            except Exception as e:
+                self.display.delete(0, tk.END)
+                self.display.insert(0, "Ошибка")
         else:
             self.display.insert(tk.END, button)
-
     def clear_display(self):
         """
         Очистка поля ввода.
