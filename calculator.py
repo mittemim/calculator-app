@@ -1,5 +1,6 @@
 def add(x, y):
-    return x + y
+    summary = x + y
+    return summary
 
 def subtract(x, y):
     return x - y
