@@ -1,0 +1,5 @@
+site_name: My Project Docs
+theme: readthedocs
+nav:
+  - Home: index.md
+  - Installation: installation.md
